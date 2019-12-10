@@ -1,0 +1,53 @@
+[core]
+  editor = vi
+  whitespace = trailing-space,space-before-tab
+
+[apply]
+  whitespace = fix
+
+[color]
+  interactive = true
+  status = true
+  branch = true
+  diff = true
+
+[alias]
+  st = status
+  cf = clean -f
+  ci = commit
+  co = checkout
+  a  = add
+  b  = branch
+  d  = diff
+  dc = diff --cached
+  ri = rebase -i HEAD~5
+  pr = pull --rebase
+  cp = cherry-pick
+
+[user]
+  email = dane.harrigan@gmail.com
+  name  = Dane Harrigan
+
+[github]
+  user  = daneharrigan
+
+[pager]
+  stash = false
+
+[merge]
+  tool = opendiff
+
+[heroku]
+  account = heroku
+
+[credential]
+  helper = osxkeychain
+
+[http]
+  sslVerify = false
+
+[push]
+  default = simple
+
+[hub]
+  protocol = https
