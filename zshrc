@@ -37,6 +37,7 @@ export GOPATH=~/Projects
 export PATH=$GOPATH/bin:$PATH
 export PATH=$PATH:/usr/local/kubebuilder/bin
 export RBENV_ROOT=/usr/local/var/rbenv
+export VIM_COLOR=hyper-dark
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
