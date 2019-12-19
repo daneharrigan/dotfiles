@@ -31,7 +31,9 @@ au BufRead,BufNewFile *.rb   set filetype=ruby
 au BufRead,BufNewFile *.json set filetype=javascript
 au BufRead,BufNewFile *.yml  set filetype=yaml
 au BufRead,BufNewFile *.yaml set filetype=yaml
+au BufRead,BufNewFile *.yml  set filetype=yaml
 au BufRead,BufNewFile *.tf   set filetype=terraform
+au BufRead,BufNewFile *.graphql set filetype=graphql
 "au FileType go nmap <Leader>d <Plug>(go-def)
 "
 autocmd Filetype sh         setlocal ts=2 sts=2 sw=2 expandtab
@@ -43,6 +45,7 @@ autocmd Filetype python     setlocal ts=4 sts=4 sw=4 expandtab
 autocmd Filetype go         setlocal ts=4 sts=4 sw=4 noexpandtab
 autocmd Filetype yaml       setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype terraform  setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype graphql    setlocal ts=2 sts=2 sw=2 expandtab
 
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
