@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  development:
+    user: "${UID}:${GID}"
+    working_dir: /home/dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PROJECTS: /home/dev/projects
+        GO_VERSION: 1.13.5
+        RUBY_VERSION: 2.7.0
+        USER_ID: "${UID}"
+        GROUP_ID: "${GID}"
+    volumes:
+      - ~/.development/projects:/home/dev/projects
+      - ~/.development/ssh:/home/dev/.ssh
+      - ~/.development/gnupg:/home/dev/.gnupg

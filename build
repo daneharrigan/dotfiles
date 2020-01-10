@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+export GID=`id -g`
+export UID=`id -u` 2> /dev/null
+
+docker-compose build development
