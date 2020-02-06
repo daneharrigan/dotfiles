@@ -8,10 +8,10 @@ ARG USER_ID
 ARG GROUP_ID
 ARG RBENV_ROOT=/usr/local/var/rbenv
 ARG USER_DIR=/home/dev
+ARG DOTFILES=$USER_DIR/.dotfiles
+ARG PRIVATE=$USER_DIR/.private
 
 ENV TERM=xterm-256color
-ENV SHELL=/usr/bin/zsh
-ENV GOPATH=$PROJECTS
 
 RUN apt-get update && \
     apt-get upgrade -y && \
@@ -33,8 +33,19 @@ RUN /usr/local/rbenv/bin/rbenv install $RUBY_VERSION && \
 RUN groupadd -g $GROUP_ID -o dev
 RUN useradd -m -u $USER_ID -g dev -o -s /usr/bin/zsh dev
 
-RUN ln -s $PROJECTS/src/github.com/daneharrigan/dotfiles/config $USER_DIR/.config && \
-    ln -s $PROJECTS/src/github.com/daneharrigan/dotfiles/gemrc /$USER_DIR.gemrc && \
-    ln -s $PROJECTS/src/github.com/daneharrigan/dotfiles/gitconfig $USER_DIR/.gitconfig && \
-    ln -s $PROJECTS/src/github.com/daneharrigan/dotfiles/tmux.conf $USER_DIR/.tmux.conf && \
-    ln -s $PROJECTS/src/github.com/daneharrigan/dotfiles/zshrc $USER_DIR/.zshrc
+ENV SHELL=/usr/bin/zsh
+ENV PROJECTS=$PROJECTS
+
+RUN ln -s $DOTFILES/config $USER_DIR/.config && \
+    ln -s $DOTFILES/gemrc /$USER_DIR.gemrc && \
+    ln -s $DOTFILES/gitconfig $USER_DIR/.gitconfig && \
+    ln -s $DOTFILES/tmux.conf $USER_DIR/.tmux.conf && \
+    ln -s $DOTFILES/zshrc $USER_DIR/.zshrc && \
+    ln -s $PRIVATE/netrc $USER_DIR/.netrc
+
+RUN apt-get update -y && \
+    apt install -y apt-transport-https ca-certificates gnupg-agent software-properties-common && \
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
+    add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu disco stable" && \
+    apt update -y && \
+    apt install -y docker-ce mysql

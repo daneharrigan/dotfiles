@@ -24,13 +24,6 @@
   pr = pull --rebase
   cp = cherry-pick
 
-[user]
-  email = dane.harrigan@gmail.com
-  name  = Dane Harrigan
-
-[github]
-  user  = daneharrigan
-
 [pager]
   stash = false
 
@@ -41,7 +34,7 @@
   account = heroku
 
 [credential]
-  helper = osxkeychain
+  #helper = osxkeychain
 
 [http]
   sslVerify = false
@@ -51,3 +44,9 @@
 
 [hub]
   protocol = https
+
+[include]
+    path = .private/gitconfig
+[user]
+	email = dharrigan@hashicorp.com
+	name = Dane Harrigan

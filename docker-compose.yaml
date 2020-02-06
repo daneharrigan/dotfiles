@@ -3,6 +3,7 @@ services:
   development:
     user: "${UID}:${GID}"
     working_dir: /home/dev
+    tty: true
     build:
       context: .
       dockerfile: Dockerfile
@@ -13,6 +14,8 @@ services:
         USER_ID: "${UID}"
         GROUP_ID: "${GID}"
     volumes:
-      - ~/.development/projects:/home/dev/projects
-      - ~/.development/ssh:/home/dev/.ssh
-      - ~/.development/gnupg:/home/dev/.gnupg
+      - ./cache/projects:/home/dev/projects
+      - ./cache/ssh:/home/dev/.ssh
+      - ./cache/gnupg:/home/dev/.gnupg
+      - ./cache/dotfiles:/home/dev/.dotfiles
+      - ./cache/private:/home/dev/.private
