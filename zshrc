@@ -63,6 +63,6 @@ function prompt_char {
 
 prompt="%1~$(prompt_char) "
 
-if [ -f ~/.private/zshrc ]; then
-  source ~/.private/zshrc
+if [ -f ~/.zshrc.local ]; then
+  source ~/.zshrc.local
 fi

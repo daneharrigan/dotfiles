@@ -1,0 +1,16 @@
+brew "git"
+brew "rbenv"
+brew "ruby-build"
+brew "node"
+brew "neovim"
+brew "tmux"
+brew "zsh"
+brew "gpg2"
+brew "hub"
+
+cask "docker"
+cask "alacritty"
+cask "google-chrome"
+
+mas "1Password"
+mas "Xcode"

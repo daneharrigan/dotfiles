@@ -46,7 +46,7 @@
   protocol = https
 
 [include]
-    path = .private/gitconfig
+    path = .gitconfig.local
 [user]
 	email = dharrigan@hashicorp.com
 	name = Dane Harrigan

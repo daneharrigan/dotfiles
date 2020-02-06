@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/Users/dharrigan/Projects/src/github.com/daneharrigan/dotfiles'
 let g:netrw_dirhist_6='/Users/daneharrigan/Projects/src/github.com/hashicorp/cloud-consul-service/cadence/workflow/create'
 let g:netrw_dirhist_5='/Users/daneharrigan/Projects/src/github.com/hashicorp/cloud-consul-host-manager/.circleci/config'
 let g:netrw_dirhist_4='/Users/dharrigan/.config/nvim/colors'
