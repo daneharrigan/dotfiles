@@ -12,5 +12,5 @@ cask "docker"
 cask "alacritty"
 cask "google-chrome"
 
-mas "1Password"
-mas "Xcode"
+mas "1Password", id: "1333542190"
+mas "Xcode", id: "497799835"
