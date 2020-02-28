@@ -27,6 +27,7 @@ bindkey '^r' history-incremental-search-backward
 
 alias uuidgen='ruby -rsecurerandom -e "print SecureRandom.uuid"'
 alias vi=nvim # trying out neovim
+alias now='echo $(date +"%Y%m%d%H%M")'
 
 if [ -z $PROJECTS ]; then
   export PROJECTS=~/Projects

@@ -29,6 +29,7 @@ au BufRead,BufNewFile *.yml  set filetype=yaml
 au BufRead,BufNewFile *.yaml set filetype=yaml
 au BufRead,BufNewFile *.yml  set filetype=yaml
 au BufRead,BufNewFile *.tf   set filetype=terraform
+au BufRead,BufNewFile *.hcl  set filetype=hcl
 au BufRead,BufNewFile *.graphql set filetype=graphql
 au BufRead,BufNewFile *.proto   set filetype=proto
 
@@ -43,6 +44,7 @@ autocmd Filetype yaml       setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype terraform  setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype graphql    setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype proto      setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype hcl        setlocal ts=2 sts=2 sw=2 expandtab
 
 let g:prettier#autoformat = 0
 "autocmd BufWritePre *.yaml Neoformat ",*.yml,*.proto Neoformat

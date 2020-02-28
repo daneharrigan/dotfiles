@@ -33,8 +33,8 @@ hi ModeMsg        ctermfg=246     ctermbg=NONE      cterm=NONE
 hi MoreMsg        ctermfg=246     ctermbg=NONE      cterm=NONE
 hi NonText        ctermfg=251      ctermbg=NONE      cterm=NONE
 hi Normal         ctermfg=242     ctermbg=NONE      cterm=NONE
-hi Pmenu          ctermfg=255     ctermbg=251      cterm=NONE
-hi PmenuSel       ctermfg=255     ctermbg=251      cterm=bold
+hi Pmenu          ctermfg=255     ctermbg=246      cterm=NONE
+hi PmenuSel       ctermfg=255     ctermbg=242      cterm=bold
 hi PmenuSbar      ctermfg=246     ctermbg=NONE      cterm=NONE
 hi PmenuThumb     ctermfg=246     ctermbg=NONE      cterm=NONE
 hi Question       ctermfg=246     ctermbg=NONE      cterm=NONE
