@@ -40,11 +40,6 @@ export EDITOR=vi
 export KEYTIMEOUT=1
 export GO111MODULE=on
 export GOPATH=$PROJECTS
-export PATH=$PATH:/usr/local/bin
-export PATH=$GOPATH/bin:$PATH
-export PATH=$PATH:/usr/local/kubebuilder/bin
-export PATH=$PATH:/usr/local/lib/node_modules/*/bin
-export PATH=/usr/local/opt/node@10/bin:$PATH
 export RBENV_ROOT=/usr/local/var/rbenv
 
 if [[ -z "${VIM_COLOR}" ]]; then
@@ -54,15 +49,16 @@ fi
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 cdpath=$GOPATH/src
-
-function prompt_char {
-  if [[ whoami = "root" ]]; then
-    echo "#"; return
-  fi
-  echo "$"
-}
-
-prompt="%1~$(prompt_char) "
+prompt="%1~%%%  "
+path=(
+  /bin
+  /usr/bin
+  /usr/local/bin
+  /usr/local/lib/node_modules/*/bin
+  /usr/local/opt/node@10/bin
+  $GOPATH/bin
+  $path
+)
 
 if [ -f ~/.zshrc.local ]; then
   source ~/.zshrc.local
