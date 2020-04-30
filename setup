@@ -1,0 +1,56 @@
+#!/bin/bash
+
+# install xcode and brew
+echo ">> Installing Xcode select"
+xcode-select --install
+
+echo ">> Installing Homebrew"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+echo ">> Installing Brew packages"
+brew bundle
+
+# use zsh as shell
+
+echo ">> Setting zsh as shell"
+sudo sh -c 'echo "/usr/local/bin/zsh" >> /etc/shells'
+chsh -s /usr/local/bin/zsh $USER
+
+# setup symlink
+
+DOTFILES=(config zshrc gitconfig gemrc tmux.conf tmate.conf)
+PWD=$(pwd)
+
+for file in "${DOTFILES[@]}"; do
+  echo -n ">> $file..."
+  if [ -e "$HOME/.$file" ]; then
+    if [ "$FORCE" != "true" ]; then
+      echo " [SKIP]"
+      continue
+    fi
+
+    rm -rf $HOME/.$file
+  fi
+
+  ln -s $PWD/$file ~/.$file
+  echo " [OK]"
+done
+
+# create loca files
+echo
+echo ">> Creating local files"
+
+LOCALFILES=(gitconfig.local zshrc.local)
+
+for file in "${LOCALFILES[@]}"; do
+  echo -n ">> $file..."
+  if [ -e "$HOME/.$file" ]; then
+    if [ "$FORCE" != "true" ]; then
+      echo " [SKIP]"
+      continue
+    fi
+  fi
+
+  touch $HOME/.$file
+  echo " [OK]"
+done
