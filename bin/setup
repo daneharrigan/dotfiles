@@ -1,5 +1,0 @@
-#!/bin/bash
-
-bin/symlink
-bin/install
-bin/keys
