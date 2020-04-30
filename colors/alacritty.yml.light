@@ -37,7 +37,6 @@ colors:
   indexed_colors: []
 
 env:
-  TERM: xterm-256color
   VIM_COLOR: hyper-light
 
 window:
