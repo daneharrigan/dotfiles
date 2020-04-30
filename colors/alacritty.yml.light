@@ -1,0 +1,111 @@
+colors:
+  primary:
+    background: '0xF5F6F8'
+    foreground: '0x41454A'
+
+  # Light colored theme
+  normal:
+    black:   '0x383B3F'
+    red:     '0xC84034'
+    green:   '0x1D9467'
+    yellow:  '0xC5B87C'
+    blue:    '0x1563FF'
+    magenta: '0x9E2159'
+    cyan:    '0x3AA59A'
+    white:   '0xFFFFFF'
+
+  bright:
+    black:   '0x383B3F'
+    red:     '0xFE6159'
+    green:   '0x31D04F'
+    yellow:  '0xC5B87C'
+    blue:    '0x418FFC'
+    magenta: '0xFE306A'
+    cyan:    '0x3AA59A'
+    white:   '0xFFFFFF'
+
+  dim:
+    black:   '0x383B3F'
+    red:     '0xFE6159'
+    green:   '0x31D04F'
+    yellow:  '0xC5B87C'
+    blue:    '0x418FFC'
+    magenta: '0xFE306A'
+    cyan:    '0x3AA59A'
+    white:   '0xFFFFFF'
+
+  indexed_colors: []
+
+env:
+  TERM: xterm-256color
+  VIM_COLOR: hyper-light
+
+window:
+  startup_mode: Windowed
+  dimensions:
+    columns: 120
+    lines: 40
+
+  padding:
+    x: 15
+    y: 15
+
+  dynamic_padding: true
+  decorations: buttonless
+
+scrolling:
+  history: 1000
+  multiplier: 3
+
+font:
+  normal:
+    family: Menlo
+  size: 13.0
+
+  offset:
+    x: 0
+    y: 0
+
+  glyph_offset:
+    x: 0
+    y: 0
+
+  use_thin_strokes: true
+
+visual_bell:
+  animation: EaseOutExpo
+  color: '0xffffff'
+  duration: 0
+
+mouse:
+  double_click: { threshold: 300 }
+  triple_click: { threshold: 300 }
+  hide_when_typing: true
+  url:
+    launcher: None
+
+selection:
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>"
+  save_to_clipboard: false
+
+mouse_bindings:
+  - { mouse: Middle, action: PasteSelection }
+
+cursor:
+  style: Block
+  unfocused_hollow: true
+
+shell:
+  program: /usr/local/bin/zsh
+
+debug:
+  render_timer: false
+  persistent_logging: false
+  log_level: None
+  print_events: false
+  ref_test: false
+
+draw_bold_text_with_bright_colors: false
+background_opacity: 1.0
+key_bindings: []
+live_config_reload: true
