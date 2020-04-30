@@ -21,6 +21,9 @@ chsh -s /usr/local/bin/zsh $USER
 DOTFILES=(config zshrc gitconfig gemrc tmux.conf tmate.conf)
 PWD=$(pwd)
 
+ln -s $PWD/colors/alacritty.yml.light $PWD/config/alacritty.yml
+ln -s $PWD/colors/tmux.conf.light $PWD/tmux.conf
+
 for file in "${DOTFILES[@]}"; do
   echo -n ">> $file..."
   if [ -e "$HOME/.$file" ]; then
