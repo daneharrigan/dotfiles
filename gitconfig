@@ -33,11 +33,8 @@
 [heroku]
   account = heroku
 
-[credential]
-  #helper = osxkeychain
-
 [http]
-  sslVerify = false
+  sslVerify = true
 
 [push]
   default = simple
