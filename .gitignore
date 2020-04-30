@@ -1,1 +1,3 @@
 config/hub
+config/alacritty.yml
+tmux.conf
