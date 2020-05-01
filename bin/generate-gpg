@@ -1,0 +1,6 @@
+#!/bin/sh
+
+gpg --full-generate-key
+gpg --list-secret-keys --keyid-format LONG
+KEY_ID=$(gpg --list-secret-keys --keyid-format LONG | grep sec | grep rsa4096 | cut -d '/' -f2 | cut -d ' ' -f1)
+gpg --armor --export $KEY_ID
