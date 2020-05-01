@@ -38,7 +38,7 @@ hi PmenuSel       ctermfg=255     ctermbg=242      cterm=bold
 hi PmenuSbar      ctermfg=246     ctermbg=NONE      cterm=NONE
 hi PmenuThumb     ctermfg=246     ctermbg=NONE      cterm=NONE
 hi Question       ctermfg=246     ctermbg=NONE      cterm=NONE
-hi Search         ctermfg=246     ctermbg=NONE      cterm=bold
+hi Search         ctermfg=238     ctermbg=NONE      cterm=bold
 hi SpecialKey     ctermfg=246     ctermbg=NONE      cterm=NONE
 hi SpellBad       ctermfg=246     ctermbg=NONE      cterm=NONE
 hi SpellCap       ctermfg=246     ctermbg=NONE      cterm=NONE
