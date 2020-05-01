@@ -35,6 +35,7 @@ export KEYTIMEOUT=1
 export GO111MODULE=on
 export GOPATH=$PROJECTS
 export RBENV_ROOT=/usr/local/var/rbenv
+export GPG_TTY=$(tty)
 
 if [ -z "${VIM_COLOR}" ]; then
 export VIM_COLOR=hyper-dark
