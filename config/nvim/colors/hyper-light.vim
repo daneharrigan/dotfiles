@@ -28,7 +28,7 @@ hi Folded         ctermfg=246     ctermbg=NONE      cterm=NONE
 hi FoldColumn     ctermfg=246     ctermbg=NONE      cterm=NONE
 hi SignColumn     ctermfg=246     ctermbg=NONE      cterm=NONE
 hi IncSearch      ctermfg=246     ctermbg=NONE      cterm=NONE
-hi MatchParen     ctermfg=246     ctermbg=NONE      cterm=bold
+hi MatchParen     ctermfg=238     ctermbg=251      cterm=bold
 hi ModeMsg        ctermfg=246     ctermbg=NONE      cterm=NONE
 hi MoreMsg        ctermfg=246     ctermbg=NONE      cterm=NONE
 hi NonText        ctermfg=251      ctermbg=NONE      cterm=NONE
