@@ -18,28 +18,8 @@ chsh -s /usr/local/bin/zsh $USER
 
 # setup symlink
 
-DOTFILES=(config zshrc gitconfig gemrc tmux.conf tmate.conf)
-PWD=$(pwd)
+bin/symlink
 
-ln -s $PWD/colors/alacritty.yml.light $PWD/config/alacritty.yml
-ln -s $PWD/colors/tmux.conf.light $PWD/tmux.conf
-
-for file in "${DOTFILES[@]}"; do
-  echo -n ">> $file..."
-  if [ -e "$HOME/.$file" ]; then
-    if [ "$FORCE" != "true" ]; then
-      echo " [SKIP]"
-      continue
-    fi
-
-    rm -rf $HOME/.$file
-  fi
-
-  ln -s $PWD/$file ~/.$file
-  echo " [OK]"
-done
-
-# create loca files
 echo
 echo ">> Creating local files"
 
