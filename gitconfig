@@ -48,4 +48,4 @@
 [include]
   path = .gitconfig.local
 [gpg]
-	program = gpg
+  program = gpg
