@@ -1,5 +1,5 @@
 [core]
-  editor = vi
+  editor = nvim
   whitespace = trailing-space,space-before-tab
 
 [apply]
