@@ -37,10 +37,6 @@ export GOPATH=$PROJECTS
 export RBENV_ROOT=/usr/local/var/rbenv
 export GPG_TTY=$(tty)
 
-if [ -z "${VIM_COLOR}" ]; then
-export VIM_COLOR=hyper-dark
-fi
-
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 cdpath=$GOPATH/src

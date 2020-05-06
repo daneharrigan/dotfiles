@@ -16,7 +16,6 @@ bind-key v split-window -h
 bind-key s split-window -v
 bind -n C-k clear-history
 
-set-option -ga update-environment 'VIM_COLOR'
 set-option -g default-terminal xterm-256color
 
 set-option -ga terminal-overrides ",xterm*:Tc:smcup@:rmcup@"
