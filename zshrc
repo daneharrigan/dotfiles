@@ -54,3 +54,12 @@ path=(
 if [ -f ~/.zshrc.local ]; then
   source ~/.zshrc.local
 fi
+
+if [ -z "$TMUX" ]; then
+  tmux list-sessions 2>&1 > /dev/null
+  if [ $? -eq 0 ]; then
+    tmux attach
+  else
+    tmux
+  fi
+fi
