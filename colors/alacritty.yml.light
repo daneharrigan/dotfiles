@@ -12,7 +12,7 @@ colors:
     blue:    '0x1563FF'
     magenta: '0x9E2159'
     cyan:    '0x3AA59A'
-    white:   '0xFFFFFF'
+    white:   '0xCCCCCC'
 
   bright:
     black:   '0x383B3F'
@@ -22,7 +22,7 @@ colors:
     blue:    '0x418FFC'
     magenta: '0xFE306A'
     cyan:    '0x3AA59A'
-    white:   '0xFFFFFF'
+    white:   '0xEEEEEE'
 
   dim:
     black:   '0x383B3F'
@@ -32,7 +32,7 @@ colors:
     blue:    '0x418FFC'
     magenta: '0xFE306A'
     cyan:    '0x3AA59A'
-    white:   '0xFFFFFF'
+    white:   '0xEEEEEE'
 
   indexed_colors: []
 
@@ -73,7 +73,7 @@ font:
 
 visual_bell:
   animation: EaseOutExpo
-  color: '0xffffff'
+  color: '0xEEEEEE'
   duration: 0
 
 mouse:
