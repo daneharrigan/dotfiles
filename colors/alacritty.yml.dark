@@ -1,7 +1,7 @@
 colors:
   primary:
-    background: '0xFFFFFF'
-    foreground: '0x666666'
+    background: '0x252937'
+    foreground: '0xf8f8f2'
 
   # Normal colors
   normal:
@@ -80,7 +80,8 @@ mouse:
   double_click: { threshold: 300 }
   triple_click: { threshold: 300 }
   hide_when_typing: true
-  url: None
+  url:
+    launcher: None
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
