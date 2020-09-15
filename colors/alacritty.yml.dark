@@ -40,7 +40,7 @@ env:
   VIM_COLOR: hyper-dark
 
 window:
-  startup_mode: Windowed
+  startup_mode: Fullscreen
   dimensions:
     columns: 120
     lines: 40
