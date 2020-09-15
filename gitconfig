@@ -22,6 +22,7 @@
   dc = diff --cached
   ri = rebase -i HEAD~5
   pr = pull --rebase
+  ps = pull --rebase --recurse-submodules
   cp = cherry-pick
 
 [pager]
